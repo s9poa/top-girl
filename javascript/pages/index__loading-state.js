@@ -50,7 +50,7 @@
         'Verifying Game Resources . . .',
         'Platform Certification in Progress . . .',
         'Connecting to Gateway . . .',
-        'Request Character List . . .',
+        'Requesting Character List . . .',
         'Logging into Server . . .'
       ];
       const totalTime = config.checkInterval * messages.length;

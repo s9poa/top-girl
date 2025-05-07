@@ -2,7 +2,7 @@
     height: 100vh;
     height: 100svh;
     height: 100dvh;
-    position: relative;
+    box-shadow: 0 0 1px hsl(250, 84%, 80%);
 }
 .loading-state {
     height: 100%;
@@ -18,7 +18,6 @@
     gap: 1rem;
     background: #000;
     user-select: none;
-    display: none;
 }
 .loading-state.one > .music-design-grouping {
     display: flex;
@@ -151,12 +150,60 @@
     background: rgba(255,255,255,.1);
 }
 .loading-state.two .loading-bar {
-    background-image: linear-gradient(to right, hsl(250, 85%, 70%), hsl(250, 85%, 80%));
+    background-image: linear-gradient(to right, hsl(250, 86%, 70%), hsl(250, 84%, 80%));
     border-radius: inherit;
     height: 100%;
     width: 0%;
 }
 /* Loading State 3 */
 .loading-state.three {
-    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+}
+.loading-state.three h1 {
+    font-size: 5rem;
+    background: #8771F4;
+    background: linear-gradient(to top, hsl(250, 86%, 70%) 0%, hsl(250, 84%, 80%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    margin-bottom: auto;  
+    transition: font-size .2s ease-in-out;
+}
+.loading-state.three a {
+    height: 4rem;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, hsl(41, 94%, 63%), hsl(33, 98%, 55%));
+    padding-inline: 4rem;
+    margin-bottom: auto;
+    border-radius: 10px;
+    color: hsl(25, 81%, 21%);
+    font-family: var(--heading-font-family);
+    overflow: clip;
+    position: relative;
+}
+.loading-state.three a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 5px;
+    background: hsl(27, 76%, 43%);
+    filter: blur(2px);
+}
+
+@media(max-width: 600px) {
+    .loading-state.three h1 {
+        font-size: 4rem;
+    }
 }
