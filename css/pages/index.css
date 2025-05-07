@@ -1,0 +1,162 @@
+.wrapper {
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    position: relative;
+}
+.loading-state {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+/* Loading State 1 */
+.loading-state.one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #000;
+    user-select: none;
+    display: none;
+}
+.loading-state.one > .music-design-grouping {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+.loading-state.one .music-design-grouping > i {
+    max-width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--gray);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    align-content: center;
+    text-align: center;
+}
+.loading-state.one .music-design-grouping > div {
+    background: var(--gray);
+    border-radius: 100vw;
+}
+.loading-state.one .music-design-grouping .mdg-l1, .loading-state.one .music-design-grouping .mdg-r11 {
+    height: 5px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l2, .loading-state.one .music-design-grouping .mdg-r10 {
+    height: 8px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l3, .loading-state.one .music-design-grouping .mdg-r9 {
+    height: 11px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l4, .loading-state.one .music-design-grouping .mdg-r8 {
+    height: 14px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l5, .loading-state.one .music-design-grouping .mdg-r7 {
+    height: 20px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l6, .loading-state.one .music-design-grouping .mdg-r6 {
+    height: 25px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l7, .loading-state.one .music-design-grouping .mdg-r5 {
+    height: 15px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l8, .loading-state.one .music-design-grouping .mdg-r4 {
+    height: 20px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l9, .loading-state.one .music-design-grouping .mdg-r3 {
+    height: 35px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l10, .loading-state.one .music-design-grouping .mdg-r2 {
+    height: 20px;
+    width: 2px;
+}
+.loading-state.one .music-design-grouping .mdg-l11, .loading-state.one .music-design-grouping .mdg-r1 {
+    height: 15px;
+    width: 2px;
+}
+.loading-state.one > p {
+    max-width: 50ch;
+    width: 100%;
+    text-wrap: pretty;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Loading State 2 */
+.loading-state.two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+.loading-state.two .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.loading-state.two .header__top {
+    display: flex;
+    justify-content: space-between;
+}
+.loading-state.two .header__bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+.loading-state.two .game-data {
+    user-select: none;
+}
+.loading-state.two .header__top nav {
+    display: flex;
+    gap: 1rem;
+}
+.loading-state.two a {
+    transition: all .05s ease-in-out;
+}
+.loading-state.two a > i {
+    max-width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    border: 2px solid hsl(250, 85%, 80%);
+    background: hsla(250, 85%, 80%, .25);
+    border-radius: 20px;
+    font-size: 1.2rem;
+    align-content: center;
+    text-align: center;
+}
+.loading-state.two a:focus {
+    transform: scale(.875);
+}
+.loading-state.two .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.loading-state.two .loading-bar-outline {
+    border-radius: 100vw;
+    height: 20px;
+    width: 100%;
+    background: rgba(255,255,255,.1);
+}
+.loading-state.two .loading-bar {
+    background-image: linear-gradient(to right, hsl(250, 85%, 70%), hsl(250, 85%, 80%));
+    border-radius: inherit;
+    height: 100%;
+    width: 0%;
+}
+/* Loading State 3 */
+.loading-state.three {
+    /* display: none; */
+}
