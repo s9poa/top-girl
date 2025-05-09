@@ -7,6 +7,7 @@
     --body-bg: #fff;
     --white: #fff;
     --gray: hsl(0,0%, 30%);
+    --purple: hsl(250, 85%, 80%);
 }
 
 *::before, *::after {
@@ -102,5 +103,15 @@ footer {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    box-shadow: 0 0 1px hsl(250, 84%, 80%);
+    background: #000;
 }
-
+.scale-interactable {
+    transition: all .025s ease-in-out;
+}
+.scale-interactable:focus {
+    transform: scale(.875);
+}

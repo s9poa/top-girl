@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    background: hsla(271, 36%, 23%, 0.1);
+}
+/* Header Left Side */
+header .lh {
+    display: grid;
+    place-items: center;
+    background: hsla(271, 36%, 23%, 0.3);
+    border: 3px solid hsla(271, 36%, 23%, 0.3);
+    border-radius: 50%;
+    min-width: 5rem;
+    max-width: 5rem;
+    height: 5rem;
+    padding: .25rem;
+}
+header .lh .profile {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: url("../../images/global/s9poa.png");
+    background-size: cover;
+    background-position: center;
+}
+/* Header Right Side */
+header .rh {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+header .rh > div {
+    height: 100%;
+}
+header .rh__top {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .5rem;
+}
+header .rh__top > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 5px;
+    background: hsla(271, 36%, 23%, 0.2);
+    font-size: .8rem;
+    transition: padding .2s ease-in-out, gap .2s ease-in-out;
+}
+header .rh__top > button > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: gap .2s ease-in-out;
+}
+header .rh__top > button > div > span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-align: left;
+}
+header .rh__top > button > i {
+    color: var(--purple);
+}
+header .rh__top > .money > div i {
+    color: rgb(157, 219, 157);
+}
+header .rh__top > .gold > div i {
+    color: gold;
+}
+header .rh__top > .fans > div i {
+    color: cornflowerblue;
+}
+
+@media (max-width: 600px) {
+    header .rh__top > button {
+        padding: 0 .5rem;
+        gap: .5rem;
+    }
+    header .rh__top > button > div {
+        gap: .5rem;
+    }
+}
+@media (max-width: 480px) {
+}

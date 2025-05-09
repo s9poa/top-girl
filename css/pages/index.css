@@ -1,9 +1,3 @@
-.wrapper {
-    height: 100vh;
-    height: 100svh;
-    height: 100dvh;
-    box-shadow: 0 0 1px hsl(250, 84%, 80%);
-}
 .loading-state {
     height: 100%;
     width: 100%;
@@ -117,22 +111,16 @@
     display: flex;
     gap: 1rem;
 }
-.loading-state.two a {
-    transition: all .05s ease-in-out;
-}
 .loading-state.two a > i {
     max-width: 3rem;
     min-width: 3rem;
     height: 3rem;
-    border: 2px solid hsl(250, 85%, 80%);
+    border: 2px solid var(--purple);
     background: hsla(250, 85%, 80%, .25);
     border-radius: 20px;
     font-size: 1.2rem;
     align-content: center;
     text-align: center;
-}
-.loading-state.two a:focus {
-    transform: scale(.875);
 }
 .loading-state.two .footer {
     display: flex;
@@ -205,5 +193,10 @@
 @media(max-width: 600px) {
     .loading-state.three h1 {
         font-size: 4rem;
+    }
+}
+@media(max-width: 480px) {
+    .loading-state.three h1 {
+        font-size: 3rem;
     }
 }
