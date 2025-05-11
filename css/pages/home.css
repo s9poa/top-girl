@@ -2,19 +2,21 @@ header {
     display: flex;
     gap: 1rem;
     padding: .5rem 1rem;
-    background: hsla(271, 36%, 23%, 0.1);
+    background: hsla(271, 36%, 23%, 0.2);
+    transition: gap .2s ease-in-out, padding .2s ease-in-out;
 }
 /* Header Left Side */
 header .lh {
     display: grid;
     place-items: center;
-    background: hsla(271, 36%, 23%, 0.3);
-    border: 3px solid hsla(271, 36%, 23%, 0.3);
+    background: hsla(271, 36%, 23%, 1);
+    border: 3px solid hsla(270, 100%, 69%, 1);
     border-radius: 50%;
     min-width: 5rem;
     max-width: 5rem;
     height: 5rem;
     padding: .25rem;
+    transition: max-width .2s ease-in-out, min-width .2s ease-in-out, height .2s ease-in-out;
 }
 header .lh .profile {
     display: grid;
@@ -31,10 +33,12 @@ header .rh {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: .5rem;
 }
 header .rh > div {
     height: 100%;
 }
+/* Header Right Side - Top Side */
 header .rh__top {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -50,7 +54,7 @@ header .rh__top > button {
     border-radius: 5px;
     background: hsla(271, 36%, 23%, 0.2);
     font-size: .8rem;
-    transition: padding .2s ease-in-out, gap .2s ease-in-out;
+    transition: padding .2s ease-in-out, gap .2s ease-in-out, font-size .2s ease-in-out;
 }
 header .rh__top > button > div {
     display: flex;
@@ -65,6 +69,7 @@ header .rh__top > button > div > span {
     -webkit-box-orient: vertical;  
     overflow: hidden;
     text-align: left;
+    max-width: 5ch;
 }
 header .rh__top > button > i {
     color: var(--purple);
@@ -78,9 +83,33 @@ header .rh__top > .gold > div i {
 header .rh__top > .fans > div i {
     color: cornflowerblue;
 }
-
+/* Header Right Side - Bottom Side */
+header .rh__bottom {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .5rem;
+}
+header .rh__bottom > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 5px;
+    background: hsla(271, 36%, 23%, 0.2);
+    font-size: .8rem;
+    transition: padding .2s ease-in-out, gap .2s ease-in-out, font-size .2s ease-in-out;
+}
+header .rh__bottom .vip {
+    font-size: 1.25rem;
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    line-height: 1rem;
+    color: #FDC830;
+    transition: font-size .2s ease-in-out;
+}
 @media (max-width: 600px) {
-    header .rh__top > button {
+    header .rh__top > button, header .rh__bottom > * {
         padding: 0 .5rem;
         gap: .5rem;
     }
@@ -89,4 +118,16 @@ header .rh__top > .fans > div i {
     }
 }
 @media (max-width: 480px) {
+    header .lh {
+        min-width: 3rem;
+        max-width: 3rem;
+        height: 3rem;
+    }
+    header .rh__top > button, header .rh__bottom > * {
+        font-size: .6rem !important;
+    }
+    header {
+        padding: .5rem;
+        gap: .5rem;
+    }
 }
