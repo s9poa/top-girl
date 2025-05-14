@@ -4,6 +4,28 @@ header {
     padding: .5rem 1rem;
     background: hsla(271, 36%, 23%, 0.2);
     transition: gap .2s ease-in-out, padding .2s ease-in-out;
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(90deg, hsla(271, 36%, 23%, 0.5), hsla(271, 36%, 23%, 0.25),transparent, transparent);
+    z-index: -1;
+}
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,.01) 1px, transparent), linear-gradient(90deg,rgba(255,255,255,.01) 1px, transparent);
+    background-size: 10px 10px;
+    z-index: -2;
 }
 /* Header Left Side */
 header .lh {
@@ -43,6 +65,7 @@ header .rh__top {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: .5rem;
+    height: 5rem;
 }
 header .rh__top > button {
     display: flex;
@@ -74,15 +97,6 @@ header .rh__top > button > div > span {
 header .rh__top > button > i {
     color: var(--purple);
 }
-header .rh__top > .money > div i {
-    color: rgb(157, 219, 157);
-}
-header .rh__top > .gold > div i {
-    color: gold;
-}
-header .rh__top > .fans > div i {
-    color: cornflowerblue;
-}
 /* Header Right Side - Bottom Side */
 header .rh__bottom {
     display: grid;
@@ -92,16 +106,15 @@ header .rh__bottom {
 header .rh__bottom > * {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
     padding: 0 1rem;
     flex-grow: 1;
     border-radius: 5px;
-    background: hsla(271, 36%, 23%, 0.2);
     font-size: .8rem;
     transition: padding .2s ease-in-out, gap .2s ease-in-out, font-size .2s ease-in-out;
+    background: hsla(271, 36%, 23%, 0.2);
 }
 header .rh__bottom .vip {
-    font-size: 1.25rem;
     font-family: var(--heading-font-family);
     font-weight: 700;
     line-height: 1rem;
@@ -119,9 +132,9 @@ header .rh__bottom .vip {
 }
 @media (max-width: 480px) {
     header .lh {
-        min-width: 3rem;
-        max-width: 3rem;
-        height: 3rem;
+        min-width: 5rem;
+        max-width: 5rem;
+        height: 5rem;
     }
     header .rh__top > button, header .rh__bottom > * {
         font-size: .6rem !important;
