@@ -12,6 +12,7 @@
     gap: 1rem;
     background: #000;
     user-select: none;
+        display: none;
 }
 .loading-state.one > .music-design-grouping {
     display: flex;
@@ -150,7 +151,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 .loading-state.three h1 {
     font-size: 5rem;
@@ -177,6 +178,7 @@
     font-family: var(--heading-font-family);
     overflow: clip;
     position: relative;
+    animation: bounce 2s linear infinite;
 }
 .loading-state.three a::before {
     content: '';
@@ -188,6 +190,17 @@
     height: 5px;
     background: hsl(27, 76%, 43%);
     filter: blur(2px);
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media(max-width: 600px) {
